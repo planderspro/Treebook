@@ -5,6 +5,10 @@
   = javascript_include_tag "application", "data-turbolinks-track" => true
   = csrf_meta_tags
   .container
+    %p.notice
+      = notice
+    %p.alert 
+      = alert
     .navbar.navbar-fixed-top
       .navbar-inner
         = link_to "Treebook", statuses_path, :class => "brand"
