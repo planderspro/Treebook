@@ -6,7 +6,7 @@
 - @statuses.each do | status |
   .status
     %strong 
-      = status.name
+      = status.user.full_name
     %p
       = status.content
     .meta
