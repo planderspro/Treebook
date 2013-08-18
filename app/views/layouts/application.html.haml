@@ -20,8 +20,8 @@
             %li=link_to "Register", new_user_registration_path
             %li=link_to "Login", new_user_session_path
   .container
-    %p.notice
-      = notice
-    %p.alert
-      = alert
+    - flash.each do |type, message| 
+      .alert{:class => flash_class(type)}
+        %button.close{ "data-dismiss" => "alert"} x
+        = message
     = yield
